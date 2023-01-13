@@ -1,13 +1,13 @@
 import { Box, Button, ButtonGroup } from "@chakra-ui/react";
 import React from "react";
 import SimpleImageSlider from "react-simple-image-slider";
-import image1 from "../../images/1evraklar.jpg";
-import image2 from "../../images/2.jpeg";
-import image3 from "../../images/3.jpeg";
-import image4 from "../../images/4.jpg";
-import image5 from "../../images/5.webp";
-import image6 from "../../images/6.jpeg";
-import image7 from "../../images/7.webp";
+import image1 from "../../images/1.jpg";
+import image2 from "../../images/2.png";
+import image3 from "../../images/3.jpg";
+import image4 from "../../images/4.png";
+import image5 from "../../images/5.jpg";
+import image6 from "../../images/6.jpg";
+import image7 from "../../images/7.jpg";
 
 const images = [
   { url: image1 },
