@@ -1,3 +1,7 @@
 .none {
   display: none;
 }
+
+.navbarWidth {
+  width: 100%;
+}

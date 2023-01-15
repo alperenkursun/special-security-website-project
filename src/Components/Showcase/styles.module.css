@@ -1,0 +1,33 @@
+.logo {
+  position: sticky;
+  top: 127px;
+  left: 70px;
+  width: 200px;
+}
+
+.logoTop1 {
+  top: 95px;
+}
+
+.logoTop2 {
+  top: 127px;
+}
+
+.showcasePosition {
+  position: relative;
+}
+
+.announcement {
+  position: absolute;
+  width: 300px;
+  height: 900px;
+  top: 0;
+  right: 0;
+  border-left: 5px solid rgb(44, 82, 130);
+  border-bottom: 5px solid rgb(44, 82, 130);
+  overflow: auto;
+}
+
+.marginAuto {
+  margin: 0 auto;
+}

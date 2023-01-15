@@ -1,0 +1,19 @@
+.mainpageContainer {
+  width: 1200px;
+  height: 600px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  font-size: 38px;
+  margin: 20px 0;
+}
+
+.paragraph {
+  font-size: 25px;
+}

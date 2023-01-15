@@ -7,3 +7,8 @@
   font-size: 18px;
   color: white;
 }
+
+.submenu {
+  display: flex !important;
+  flex-direction: column !important;
+}
