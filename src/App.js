@@ -1,17 +1,46 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import ArmedSpecialSecurity from "./Components/ArmedSpecialSecurity";
+import UnarmedSpecialSecurity from "./Components/UnarmedSpecialSecurity";
+import CompanyProfile from "./Components/CompanyProfile";
+import EducationStrategy from "./Components/EducationStrategy";
 import Footer from "./Components/Footer";
-import Mainpage from "./Components/Mainpage";
+import MainPage from "./Components/MainPage";
 import Navbar from "./Components/Navbar";
-import Showcase from "./Components/Showcase";
+import QualityPolicy from "./Components/QualityPolicy";
+import Renewal from "./Components/Renewal";
+import ArmedEducation from "./Components/ArmedEducation";
+import UnarmedEducation from "./Components/UnarmedEducation";
+import RenewalEducation from "./Components/RenewalEducation";
+import Contact from "./Components/Contact";
 
 function App() {
   return (
     <div className="app">
-      <div className="backgroundImg"></div>
       <div className="mainContainer">
         <Navbar />
-        <Showcase />
-        <Mainpage />
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/sirketprofili" element={<CompanyProfile />} />
+          <Route path="/kalitepolitikamiz" element={<QualityPolicy />} />
+          <Route path="/egitimstratejimiz" element={<EducationStrategy />} />
+          <Route
+            path="/silahliozelguvenlikkimlikkartiislemleri"
+            element={<ArmedSpecialSecurity />}
+          />
+          <Route
+            path="/silahsizozelguvenlikkimlikkartiislemleri"
+            element={<UnarmedSpecialSecurity />}
+          />
+          <Route
+            path="/yenilemeegitiminegirenlerinislemleri"
+            element={<Renewal />}
+          />
+          <Route path="/silahliegitim" element={<ArmedEducation />} />
+          <Route path="/silahsizegitim" element={<UnarmedEducation />} />
+          <Route path="/yenilemeegitimi" element={<RenewalEducation />} />
+          <Route path="/iletisim" element={<Contact />} />
+        </Routes>
         <Footer />
       </div>
     </div>

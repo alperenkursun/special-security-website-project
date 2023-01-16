@@ -14,6 +14,7 @@ import "./styles.css";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
 import React from "react";
+import { Link } from "react-router-dom";
 function Navbar() {
   const [scrollStateY, setScrollStateY] = useState(false);
 
@@ -73,21 +74,26 @@ function Navbar() {
             width: "100% !important",
           }}
         >
-          <Box textAlign="center" lineHeight="30px">
-            <h1 className={styles.mainh1}>Körfez Özel Güvenlik</h1>
+          <Link to="/">
+            <Box textAlign="center" lineHeight="30px">
+              <h1 className={styles.mainh1}>Körfez Özel Güvenlik</h1>
 
-            <h1 className={styles.otherh1}>Eğitim Hizmetleri</h1>
-          </Box>
+              <h1 className={styles.otherh1}>Eğitim Hizmetleri</h1>
+            </Box>
+          </Link>
 
           <Box>
             <ButtonGroup spacing="6">
-              <Button
-                bg="#EDF2F7"
-                variant="solid"
-                boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
-              >
-                Ana Sayfa
-              </Button>
+              <Link to="/">
+                <Button
+                  bg="#EDF2F7"
+                  variant="solid"
+                  boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
+                >
+                  Ana Sayfa
+                </Button>
+              </Link>
+
               <Menu>
                 <MenuButton
                   as={Button}
@@ -100,8 +106,12 @@ function Navbar() {
                 </MenuButton>
                 <MenuList>
                   <MenuList p="1" py="0">
-                    <Button mx="1">Şirket Profili</Button>
-                    <Button mx="1">Kalite Politikamız</Button>
+                    <Link to="/sirketprofili">
+                      <Button mx="1">Şirket Profili</Button>
+                    </Link>
+                    <Link to="/kalitepolitikamiz">
+                      <Button mx="1">Kalite Politikamız</Button>
+                    </Link>
                   </MenuList>
                 </MenuList>
               </Menu>
@@ -117,7 +127,9 @@ function Navbar() {
                 </MenuButton>
                 <MenuList>
                   <MenuList p="1" py="0">
-                    <Button mx="1">Eğitim Stratejimiz</Button>
+                    <Link to="/egitimstratejimiz">
+                      <Button mx="1">Eğitim Stratejimiz</Button>
+                    </Link>
                     <Menu className={styles.submenu}>
                       <MenuButton
                         mx="1"
@@ -127,15 +139,21 @@ function Navbar() {
                         Kimlik Kartı İşlemleri
                       </MenuButton>
                       <MenuList>
-                        <MenuItem>
-                          Silahlı Özel Güvenlik Kimlik Kartı İşlemleri
-                        </MenuItem>
-                        <MenuItem>
-                          Silahsız Özel Güvenlik Kimlik Kartı İşlemleri
-                        </MenuItem>
-                        <MenuItem>
-                          Yenileme Eğitimine Girenlerin İşlemleri
-                        </MenuItem>
+                        <Link to="/silahliozelguvenlikkimlikkartiislemleri">
+                          <MenuItem>
+                            Silahlı Özel Güvenlik Kimlik Kartı İşlemleri
+                          </MenuItem>
+                        </Link>
+                        <Link to="/silahsizozelguvenlikkimlikkartiislemleri">
+                          <MenuItem>
+                            Silahsız Özel Güvenlik Kimlik Kartı İşlemleri
+                          </MenuItem>
+                        </Link>
+                        <Link to="/yenilemeegitiminegirenlerinislemleri">
+                          <MenuItem>
+                            Yenileme Eğitimine Girenlerin İşlemleri
+                          </MenuItem>
+                        </Link>
                       </MenuList>
                     </Menu>
                     <Menu className={styles.submenu}>
@@ -147,21 +165,29 @@ function Navbar() {
                         Eğitim Süreci
                       </MenuButton>
                       <MenuList>
-                        <MenuItem>Silahlı Eğitim</MenuItem>
-                        <MenuItem>Silahsız Eğitim</MenuItem>
-                        <MenuItem>Yenileme Eğitimi</MenuItem>
+                        <Link to="/silahliegitim">
+                          <MenuItem>Silahlı Eğitim</MenuItem>
+                        </Link>
+                        <Link to="/silahsizegitim">
+                          <MenuItem>Silahsız Eğitim</MenuItem>
+                        </Link>
+                        <Link to="/yenilemeegitimi">
+                          <MenuItem>Yenileme Eğitimi</MenuItem>
+                        </Link>
                       </MenuList>
                     </Menu>
                   </MenuList>
                 </MenuList>
               </Menu>
-              <Button
-                bg="#EDF2F7"
-                variant="solid"
-                boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
-              >
-                İletişim
-              </Button>
+              <Link to="/iletisim">
+                <Button
+                  bg="#EDF2F7"
+                  variant="solid"
+                  boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
+                >
+                  İletişim
+                </Button>
+              </Link>
               <Button
                 color="white"
                 bg="black"

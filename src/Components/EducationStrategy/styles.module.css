@@ -1,11 +1,11 @@
 .mainpageContainer {
   width: 1200px;
-  height: 600px;
-  margin: 0 auto;
-  text-align: center;
+  height: calc(100vh - 168px) !important;
+  margin: 25px auto;
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
 }
 
@@ -16,4 +16,6 @@
 
 .paragraph {
   font-size: 25px;
+  white-space: pre-wrap;
+  margin: 10px 0;
 }

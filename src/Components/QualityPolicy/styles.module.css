@@ -1,0 +1,21 @@
+.mainpageContainer {
+  width: 1200px;
+  height: calc(100vh - 168px) !important;
+  margin: 20px auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.header {
+  font-size: 38px;
+  margin: 20px 0;
+}
+
+.paragraph {
+  font-size: 25px;
+  white-space: pre-wrap;
+  margin: 10px 0;
+}

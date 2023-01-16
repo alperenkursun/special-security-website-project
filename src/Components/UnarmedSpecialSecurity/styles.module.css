@@ -1,0 +1,25 @@
+.mainpageContainer {
+  width: 1200px;
+  height: calc(100vh - 128px) !important;
+  margin: 120px auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.header {
+  font-size: 32px;
+  margin: 20px 0;
+}
+
+.paragraph {
+  font-size: 18px;
+  white-space: pre-wrap;
+  margin: 10px 0;
+}
+
+li {
+  list-style-type: disc;
+}
