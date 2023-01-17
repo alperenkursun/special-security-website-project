@@ -18,6 +18,7 @@ import image14 from "../../images/14.jpg";
 import logo from "../../images/logo.png";
 import styles from "./styles.module.css";
 import "./styles.css";
+import { Link } from "react-router-dom";
 
 const images = [
   { url: image1 },
@@ -94,45 +95,51 @@ function Showcase() {
             borderRadius: "20px",
           }}
         >
-          <Button
-            bg="#2C5282"
-            color="white"
-            boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
-            opacity="0.9"
-            _hover={{
-              opacity: 1,
-            }}
-            variant="solid"
-            size="lg"
-          >
-            Duyurular
-          </Button>
-          <Button
-            bg="#2C5282"
-            color="white"
-            opacity="0.9"
-            boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
-            _hover={{
-              opacity: 1,
-            }}
-            variant="solid"
-            size="lg"
-          >
-            Faaliyetlerimiz
-          </Button>
-          <Button
-            bg="#2C5282"
-            color="white"
-            boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
-            opacity="0.9"
-            _hover={{
-              opacity: 1,
-            }}
-            variant="solid"
-            size="lg"
-          >
-            İletişim
-          </Button>
+          <Link to="/duyurular">
+            <Button
+              bg="#2C5282"
+              color="white"
+              boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
+              opacity="0.9"
+              _hover={{
+                opacity: 1,
+              }}
+              variant="solid"
+              size="lg"
+            >
+              Duyurular
+            </Button>
+          </Link>
+          <Link to="/faaliyetlerimiz">
+            <Button
+              bg="#2C5282"
+              color="white"
+              opacity="0.9"
+              boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
+              _hover={{
+                opacity: 1,
+              }}
+              variant="solid"
+              size="lg"
+            >
+              Faaliyetlerimiz
+            </Button>
+          </Link>
+          <Link to="/iletisim">
+            <Button
+              bg="#2C5282"
+              color="white"
+              boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
+              opacity="0.9"
+              _hover={{
+                opacity: 1,
+              }}
+              variant="solid"
+              size="lg"
+            >
+              İletişim
+            </Button>
+          </Link>
         </ButtonGroup>
 
         <Box className={styles.announcement} p={3} bg="rgb(237, 242, 247)">

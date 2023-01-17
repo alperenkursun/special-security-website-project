@@ -188,19 +188,21 @@ function Navbar() {
                   İletişim
                 </Button>
               </Link>
-              <Button
-                color="white"
-                bg="black"
-                variant="outline"
-                _hover={{
-                  bg: "white",
-                  color: " black",
-                  borderColor: "black",
-                }}
-                boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
-              >
-                Admin Girişi
-              </Button>
+              <Link to="/admingirisi">
+                <Button
+                  color="white"
+                  bg="black"
+                  variant="outline"
+                  _hover={{
+                    bg: "white",
+                    color: " black",
+                    borderColor: "black",
+                  }}
+                  boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
+                >
+                  Admin Girişi
+                </Button>
+              </Link>
             </ButtonGroup>
           </Box>
         </Flex>
