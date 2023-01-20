@@ -12,3 +12,31 @@
   font-weight: 600;
   padding: 4px;
 }
+
+@media screen and (max-width: 1250px) {
+  .footer {
+    height: 60px;
+    text-align: center;
+  }
+  .footerCopyRight {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .footer {
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .footer {
+    height: 150px;
+  }
+}

@@ -19,3 +19,40 @@
   white-space: pre-wrap;
   margin: 10px 0;
 }
+
+@media screen and (max-width: 1250px) {
+  .mainpageContainer {
+    width: 1000px !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .mainpageContainer {
+    width: 800px !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .mainpageContainer {
+    width: 600px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mainpageContainer {
+    width: 400px !important;
+    height: 2000px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .mainpageContainer {
+    width: 100vw !important;
+    height: 1400px !important;
+    margin: 0;
+  }
+
+  .paragraph {
+    font-size: 15px !important;
+  }
+}

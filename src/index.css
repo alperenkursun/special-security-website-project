@@ -1,6 +1,15 @@
-body {
-  width: 100%;
+html {
+  width: 100% !important;
   height: max-content;
- font-family: 'Poppins', sans-serif !important;
 }
 
+body {
+  width: 100%;
+  height: max-content !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+#root {
+  width: 100%;
+  height: max-content;
+}

@@ -12,3 +12,199 @@
   display: flex !important;
   flex-direction: column !important;
 }
+
+.navbarContainer {
+  height: 128px;
+}
+
+.topZero {
+  top: 0 !important;
+}
+
+.menuItem {
+  width: 100vw;
+  height: 50px;
+  background-color: #edf2cc;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-bottom: 1px solid grey;
+  position: relative;
+  max-width: 1903px;
+  overflow-x: hidden !important;
+  overflow-y: auto;
+}
+
+.menuItem:hover {
+  background-color: rgb(135, 188, 253) !important;
+  color: white;
+}
+
+.menuItem1 {
+  animation-name: menuItemIntro;
+  animation-duration: 0.5s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+  left: -10000px;
+}
+.menuItem2 {
+  animation-name: menuItemIntro;
+  animation-duration: 0.5s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  left: -10000px;
+}
+.menuItem3 {
+  animation-name: menuItemIntro;
+  animation-duration: 0.5s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  left: -10000px;
+}
+.menuItem4 {
+  animation-name: menuItemIntro;
+  animation-duration: 0.5s;
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
+  left: -10000px;
+}
+.menuItem5 {
+  animation-name: menuItemIntro;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  left: -10000px;
+}
+.menuItem6 {
+  animation-name: menuItemIntro;
+  animation-duration: 0.5s;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+  left: -10000px;
+}
+
+.menuItem7 {
+  animation-name: menuItemIntro;
+  animation-duration: 0.5s;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
+  left: -10000px;
+
+  background-color: black;
+  color: white;
+}
+
+.menuContainer {
+  overflow-x: hidden;
+}
+
+@keyframes menuItemIntro {
+  from {
+    left: -10000px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+.menuItem10 {
+  animation-name: menuItemOutro;
+  animation-duration: 0.5s;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
+}
+
+.menuItem20 {
+  animation-name: menuItemOutro;
+  animation-duration: 0.5s;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+.menuItem30 {
+  animation-name: menuItemOutro;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.menuItem40 {
+  animation-name: menuItemOutro;
+  animation-duration: 0.5s;
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+.menuItem50 {
+  animation-name: menuItemOutro;
+  animation-duration: 0.5s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.menuItem60 {
+  animation-name: menuItemOutro;
+  animation-duration: 0.5s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.menuItem70 {
+  animation-name: menuItemOutro;
+  animation-duration: 0.5s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes menuItemOutro {
+  from {
+    left: 0;
+  }
+  to {
+    left: -10000px;
+    height: 0 !important;
+  }
+}
+
+@media screen and (min-width: 1903px) {
+  .navbarContainer {
+    width: 100%;
+  }
+
+  .bottomNavbarContainer {
+    margin: 0 auto !important;
+    width: 1903px !important;
+  }
+}
+
+@media screen and (max-width: 1903px) {
+  .navbarContainer {
+    width: 100%;
+  }
+
+  .bottomNavbarContainer {
+    margin: 0px !important;
+    width: 100vw !important;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .bottomNavbarContainer {
+    margin: 0px !important;
+    width: 100vw !important;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .mainh1 {
+    font-size: 25px;
+    color: white;
+  }
+
+  .otherh1 {
+    font-size: 15px;
+    color: white;
+  }
+}

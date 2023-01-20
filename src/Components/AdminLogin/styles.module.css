@@ -32,3 +32,11 @@
   align-items: center;
   justify-content: center;
 }
+
+@media screen and (max-width: 1250px) {
+  .mainpageContainer {
+    width: 100vw !important;
+    height: 100vh !important;
+    border-radius: 0 !important;
+  }
+}

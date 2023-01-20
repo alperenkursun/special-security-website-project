@@ -23,3 +23,35 @@
 li {
   list-style-type: disc;
 }
+
+@media screen and (max-width: 1250px) {
+  .mainpageContainer {
+    width: 1000px !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .mainpageContainer {
+    width: 800px !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .mainpageContainer {
+    width: 600px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mainpageContainer {
+    width: 400px !important;
+    height: 1800px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .mainpageContainer {
+    width: 200px !important;
+    height: 3600px !important;
+  }
+}

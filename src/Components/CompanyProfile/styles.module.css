@@ -1,6 +1,7 @@
 .mainpageContainer {
   width: 1200px;
-  height: calc(100vh - 168px) !important;
+  /* height: calc(100vh - 168px) !important; */
+  height: 1600px;
   margin: 25px auto;
   position: relative;
   display: flex;
@@ -18,4 +19,36 @@
   font-size: 22px;
   white-space: pre-wrap;
   margin: 10px 0;
+}
+
+@media screen and (max-width: 1250px) {
+  .mainpageContainer {
+    width: 1000px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .mainpageContainer {
+    width: 800px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .mainpageContainer {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mainpageContainer {
+    width: 400px;
+    height: 2000px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .mainpageContainer {
+    width: 200px;
+    height: 4000px;
+  }
 }

@@ -23,7 +23,6 @@ function Activities() {
         style={{
           margin: "50px auto",
           borderBottom: "1px solid black",
-          width: "350PX",
         }}
       >
         FAALİYETLERİMİZ

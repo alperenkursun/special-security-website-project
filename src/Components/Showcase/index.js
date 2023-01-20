@@ -19,6 +19,7 @@ import logo from "../../images/logo.png";
 import styles from "./styles.module.css";
 import "./styles.css";
 import { Link } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 
 const images = [
   { url: image1 },
@@ -40,6 +41,15 @@ const images = [
 function Showcase() {
   const [scrollStateY2, setScrollStateY2] = useState(false);
 
+  const media1850 = useMediaQuery({ query: "(max-width: 1850px)" });
+  const media1650 = useMediaQuery({ query: "(max-width: 1650px)" });
+  const media1450 = useMediaQuery({ query: "(max-width: 1450px)" });
+  const media1250 = useMediaQuery({ query: "(max-width: 1250px)" });
+  const media1100 = useMediaQuery({ query: "(max-width: 1100px)" });
+  const media900 = useMediaQuery({ query: "(max-width: 900px)" });
+  const media650 = useMediaQuery({ query: "(max-width: 650px)" });
+  const media450 = useMediaQuery({ query: "(max-width: 450px)" });
+
   const changeDisplay = () => {
     if (window.scrollY >= 35) {
       setScrollStateY2(true);
@@ -53,29 +63,85 @@ function Showcase() {
   return (
     <>
       <div className="backgroundImg"></div>
-      <Box
-        width="100%"
-        height="900px"
-        minWidth="1903px"
-        className={styles.showcasePosition}
-      >
+      <Box width="100%" height="900px" className={styles.showcasePosition}>
         <Image
           src={logo}
           alt="Logo"
           className={`${styles.logo} ${
             scrollStateY2 ? styles.logoTop1 : styles.logoTop2
           }`}
+          style={{
+            width: media450
+              ? "30px"
+              : media650
+              ? "60px"
+              : media900
+              ? "80px"
+              : media1250
+              ? "100px"
+              : "",
+            top: media450
+              ? "280px"
+              : media650
+              ? "250px"
+              : media900
+              ? "220px"
+              : media1450
+              ? "180px"
+              : "",
+            left: media1250 ? "50%" : "70px",
+            transform: media1250 ? "translateX(-50%)" : "",
+            position: media900 ? "fixed !important" : "",
+            display: media900 ? "none" : "",
+          }}
         />
 
         <SimpleImageSlider
-          width={1200}
-          height={600}
+          width={
+            media450
+              ? "100%"
+              : media650
+              ? "100%"
+              : media900
+              ? "100%"
+              : media1100
+              ? 800
+              : media1250
+              ? 1000
+              : media1450
+              ? 600
+              : media1650
+              ? 800
+              : media1850
+              ? 1000
+              : 1200
+          }
+          height={
+            media450
+              ? 200
+              : media650
+              ? 270
+              : media900
+              ? 380
+              : media1100
+              ? 400
+              : media1250
+              ? 500
+              : media1450
+              ? 300
+              : media1650
+              ? 400
+              : media1850
+              ? 500
+              : 600
+          }
           images={images}
-          showBullets={true}
-          showNavs={true}
+          showBullets={media450 ? false : true}
+          showNavs={media450 ? false : true}
           loop={true}
           autoPlay={true}
           autoPlayDelay={10.0}
+          className={styles.slider}
           style={{
             position: "absolute",
             top: "50%",
@@ -89,10 +155,11 @@ function Showcase() {
           spacing="6"
           style={{
             position: "absolute",
-            top: "800px",
+            top: media900 ? "700px" : "800px",
             left: "50%",
             transform: "translate(-50%,-50%)",
             borderRadius: "20px",
+            display: media1250 ? "none" : "",
           }}
         >
           <Link to="/duyurular">
@@ -142,7 +209,16 @@ function Showcase() {
           </Link>
         </ButtonGroup>
 
-        <Box className={styles.announcement} p={3} bg="rgb(237, 242, 247)">
+        <Box
+          className={styles.announcement}
+          p={3}
+          bg="rgb(237, 242, 247)"
+          style={{
+            display: media1250 ? "none" : "block",
+            height: media1450 ? "870px" : "",
+            top: media1450 ? "30px" : "",
+          }}
+        >
           <Text
             fontSize="4xl"
             textAlign="center"
@@ -150,7 +226,12 @@ function Showcase() {
           >
             DUYURULAR
           </Text>
-          <Box style={{ marginTop: "20px", border: "1px solid black" }}>
+          <Box
+            style={{
+              marginTop: "20px",
+              border: "1px solid black",
+            }}
+          >
             <Text
               fontSize="xl"
               textAlign="center"

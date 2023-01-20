@@ -5,3 +5,7 @@
 .navbarWidth {
   width: 100%;
 }
+
+.topNavbar {
+  width: 100% !important;
+}
