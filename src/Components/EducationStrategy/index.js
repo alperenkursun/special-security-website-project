@@ -11,7 +11,7 @@ function EducationStrategy() {
         {"    "}Yeni yasal düzenlemeler göre kişi, Özel Güvenlik Temel Eğitimi almadan ve İç İşleri Bakanlığınca yapılan sınavda başarılı olmadan Özel Güvenlik görevlisi olarak çalışamaz ve çalıştırılamaz.
       </h1>
       <h1 className={styles.paragraph}>
-        {"    "}Körfez Özel Güvenlik Eğitim kurumumuz 28 kişilik modern,
+        {"    "}Körfez Özel Güvenlik Eğitim kurumumuz 38 kişilik modern,
         Bilgisayarlı ve projeksiyonlu sınıflarımızda, sektörünün en güçlü
         eğitici kadrosuyla, Silahlı ve Silahsız Özel Güvenlik Elemanı
         yetiştirmektedir.
