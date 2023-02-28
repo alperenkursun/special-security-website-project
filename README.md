@@ -10,6 +10,8 @@ HTML - CSS - JS - React - Chakra UI Project
 
 ## Admin Panel
 
+I can't share admin panel codes because there may be some security problems.
+
 ![aimg](adminpanelannouncement.png)
 
 ![aimg](adminpanelactivities.png)
