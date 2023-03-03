@@ -8,6 +8,8 @@ HTML - CSS - JS - React - Chakra UI Project
 
 ![kögimg](korfez.png)
 
+![kögimg](korfez2.png)
+
 ## Admin Panel
 
 I can't share admin panel codes because there may be some security problems.
