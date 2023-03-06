@@ -1,6 +1,6 @@
 # special-security-website-project
 
-HTML - CSS - JS - React - Chakra UI Project
+HTML - CSS - JS - React - Chakra UI - Node.js - Express.js - MongoDB - Mongoose Full Stack Project
 
 ---
 
