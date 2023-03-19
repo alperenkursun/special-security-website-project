@@ -1,6 +1,6 @@
 .footer {
   height: 40px;
-  background-color: rgb(237, 242, 247);
+  background-color: rgb(237, 242, 247) !important;
   display: flex;
   justify-content: center;
   align-items: center;

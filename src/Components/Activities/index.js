@@ -1,21 +1,27 @@
 import { Box, Text } from "@chakra-ui/react";
 import styles from "./styles.module.css";
-import image2 from "../../images/2.png";
-import image3 from "../../images/3.jpg";
-import image4 from "../../images/4.jpg";
-import image5 from "../../images/5.png";
-import image6 from "../../images/6.png";
-import image7 from "../../images/7.jpg";
-import image8 from "../../images/15.jpg";
-import image9 from "../../images/16.jpg";
-import image10 from "../../images/10.jpg";
-import image11 from "../../images/11.jpg";
-import image12 from "../../images/12.jpg";
-import video1 from "../../videos/video1.mp4";
+import { useEffect, useState } from "react";
+import photo1 from "../../images/1.jpg";
+import photo2 from "../../images/2.png";
+import photo3 from "../../images/3.jpg";
+import photo4 from "../../images/4.jpg";
+import photo5 from "../../images/5.png";
+import photo6 from "../../images/6.png";
+import photo7 from "../../images/7.jpg";
+import photo15 from "../../images/15.jpg";
+import photo16 from "../../images/16.jpg";
 
 function Activities() {
+  let [photos, setPhotos] = useState([]);
+  useEffect(() => {
+    fetch(`${process.env.REACT_APP_SERVER_URL}/photos`)
+      .then((response) => response.json())
+      .then((data) => {
+        setPhotos(data);
+      });
+  }, []);
   return (
-    <div>
+    <div style={{ width: "100vw" }}>
       <Text
         fontSize="4xl"
         textAlign="center"
@@ -23,47 +29,78 @@ function Activities() {
         style={{
           margin: "50px auto",
           borderBottom: "1px solid black",
+          width: "400px",
         }}
       >
         FAALİYETLERİMİZ
       </Text>
       <Box className={styles.mainpageContainer}>
-        <video controls className={styles.announcement}>
-          <source src={video1} type="video/mp4" />
-        </video>
-        <a href={image2} data-lightbox="models">
-          <img src={image2} alt="Faaliyet" className={styles.announcement} />
-        </a>{" "}
-        <a href={image3} data-lightbox="models">
-          <img src={image3} alt="Faaliyet" className={styles.announcement} />
-        </a>{" "}
-        <a href={image4} data-lightbox="models">
-          <img src={image4} alt="Faaliyet" className={styles.announcement} />
-        </a>{" "}
-        <a href={image5} data-lightbox="models">
-          <img src={image5} alt="Faaliyet" className={styles.announcement} />
-        </a>{" "}
-        <a href={image6} data-lightbox="models">
-          <img src={image6} alt="Faaliyet" className={styles.announcement} />
-        </a>
-        <a href={image7} data-lightbox="models">
-          <img src={image7} alt="Faaliyet" className={styles.announcement} />
-        </a>{" "}
-        <a href={image8} data-lightbox="models">
-          <img src={image8} alt="Faaliyet" className={styles.announcement} />
-        </a>{" "}
-        <a href={image9} data-lightbox="models">
-          <img src={image9} alt="Faaliyet" className={styles.announcement} />
-        </a>
-        <a href={image10} data-lightbox="models">
-          <img src={image10} alt="Faaliyet" className={styles.announcement} />
-        </a>{" "}
-        <a href={image12} data-lightbox="models">
-          <img src={image12} alt="Faaliyet" className={styles.announcement} />
-        </a>{" "}
-        <a href={image11} data-lightbox="models">
-          <img src={image11} alt="Faaliyet" className={styles.announcement} />
-        </a>
+        {/* {photos
+          .slice(0)
+          .reverse()
+          .map((item) => {
+            return (
+              <div key={item._id}>
+                <a href={`${item.image}`} data-lightbox="models">
+                  <img
+                    src={`${item.image}`}
+                    alt="Faaliyet"
+                    className={styles.announcement}
+                  />
+                </a>
+              </div>
+            );
+          })} */}
+        <div>
+          <a href={photo2} data-lightbox="models">
+            <img src={photo2} alt="Faaliyet" className={styles.announcement} />
+          </a>
+        </div>
+        <div>
+          <a href={photo3} data-lightbox="models">
+            <img src={photo3} alt="Faaliyet" className={styles.announcement} />
+          </a>
+        </div>
+        <div>
+          <a href={photo3} data-lightbox="models">
+            <img src={photo3} alt="Faaliyet" className={styles.announcement} />
+          </a>
+        </div>
+        <div>
+          <a href={photo4} data-lightbox="models">
+            <img src={photo4} alt="Faaliyet" className={styles.announcement} />
+          </a>
+        </div>
+        <div>
+          <a href={photo5} data-lightbox="models">
+            <img src={photo5} alt="Faaliyet" className={styles.announcement} />
+          </a>
+        </div>
+        <div>
+          <a href={photo6} data-lightbox="models">
+            <img src={photo6} alt="Faaliyet" className={styles.announcement} />
+          </a>
+        </div>
+        <div>
+          <a href={photo7} data-lightbox="models">
+            <img src={photo7} alt="Faaliyet" className={styles.announcement} />
+          </a>
+        </div>
+        <div>
+          <a href={photo15} data-lightbox="models">
+            <img src={photo15} alt="Faaliyet" className={styles.announcement} />
+          </a>
+        </div>
+        <div>
+          <a href={photo16} data-lightbox="models">
+            <img src={photo16} alt="Faaliyet" className={styles.announcement} />
+          </a>
+        </div>
+        <div>
+          <a href={photo1} data-lightbox="models">
+            <img src={photo1} alt="Faaliyet" className={styles.announcement} />
+          </a>
+        </div>
       </Box>
     </div>
   );

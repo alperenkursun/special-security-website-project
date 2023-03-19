@@ -5,10 +5,10 @@ function Contact() {
   return (
     <Box className={styles.mainpageContainer}>
       <h1 className={styles.header}>İLETİŞİM</h1>
-      {/* prettier-ignore */}
 
       <div className={styles.paragraph}>
-        {"    "}<b>Kurucu:</b>{" "}Ramazan Dereli
+        {"    "}
+        <b>Kurucu:</b> Ramazan Dereli
       </div>
       <div className={styles.paragraph}>
         {"    "}

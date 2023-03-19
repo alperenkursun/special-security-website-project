@@ -1,5 +1,5 @@
 import { Box, Image, Button, ButtonGroup, Text } from "@chakra-ui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SimpleImageSlider from "react-simple-image-slider";
 import image1 from "../../images/1.jpg";
 import image2 from "../../images/2.png";
@@ -23,6 +23,7 @@ import styles from "./styles.module.css";
 import "./styles.css";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
+import moment from "moment/moment";
 
 const images = [
   { url: image1 },
@@ -45,6 +46,16 @@ const images = [
 
 function Showcase() {
   const [scrollStateY2, setScrollStateY2] = useState(false);
+  const [announcements, setAnnouncements] = useState([]);
+
+  useEffect(() => {
+    fetch(`${process.env.REACT_APP_SERVER_URL}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setAnnouncements(data);
+        console.log(announcements);
+      });
+  }, []);
 
   const media1850 = useMediaQuery({ query: "(max-width: 1850px)" });
   const media1650 = useMediaQuery({ query: "(max-width: 1650px)" });
@@ -232,526 +243,54 @@ function Showcase() {
           >
             DUYURULAR
           </Text>
-          <Box
-            style={{
-              marginTop: "20px",
-              border: "1px solid black",
-            }}
-          >
-            <Text
-              fontSize="xl"
-              textAlign="center"
-              bg="#2c5282"
-              color="white"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Başlık
-            </Text>
-            <Text
-              fontSize="xs"
-              textAlign="center"
-              bg="#edf2cc"
-              color="black"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Tarih
-            </Text>
-            <Text
-              p={1}
-              bg="white"
-              fontSize="sm"
-              textAlign="center"
-              className={styles.marginAuto}
-            >
-              Duyuru
-            </Text>
-          </Box>
-          <Box
-            style={{
-              marginTop: "20px",
-              border: "1px solid black",
-            }}
-          >
-            <Text
-              fontSize="xl"
-              textAlign="center"
-              bg="#2c5282"
-              color="white"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Başlık
-            </Text>
-            <Text
-              fontSize="xs"
-              textAlign="center"
-              bg="#edf2cc"
-              color="black"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Tarih
-            </Text>
-            <Text
-              p={1}
-              bg="white"
-              fontSize="sm"
-              textAlign="center"
-              className={styles.marginAuto}
-            >
-              Duyuru
-            </Text>
-          </Box>{" "}
-          <Box
-            style={{
-              marginTop: "20px",
-              border: "1px solid black",
-            }}
-          >
-            <Text
-              fontSize="xl"
-              textAlign="center"
-              bg="#2c5282"
-              color="white"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Başlık
-            </Text>
-            <Text
-              fontSize="xs"
-              textAlign="center"
-              bg="#edf2cc"
-              color="black"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Tarih
-            </Text>
-            <Text
-              p={1}
-              bg="white"
-              fontSize="sm"
-              textAlign="center"
-              className={styles.marginAuto}
-            >
-              Duyuru
-            </Text>
-          </Box>{" "}
-          <Box
-            style={{
-              marginTop: "20px",
-              border: "1px solid black",
-            }}
-          >
-            <Text
-              fontSize="xl"
-              textAlign="center"
-              bg="#2c5282"
-              color="white"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Başlık
-            </Text>
-            <Text
-              fontSize="xs"
-              textAlign="center"
-              bg="#edf2cc"
-              color="black"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Tarih
-            </Text>
-            <Text
-              p={1}
-              bg="white"
-              fontSize="sm"
-              textAlign="center"
-              className={styles.marginAuto}
-            >
-              Duyuru
-            </Text>
-          </Box>{" "}
-          <Box
-            style={{
-              marginTop: "20px",
-              border: "1px solid black",
-            }}
-          >
-            <Text
-              fontSize="xl"
-              textAlign="center"
-              bg="#2c5282"
-              color="white"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Başlık
-            </Text>
-            <Text
-              fontSize="xs"
-              textAlign="center"
-              bg="#edf2cc"
-              color="black"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Tarih
-            </Text>
-            <Text
-              p={1}
-              bg="white"
-              fontSize="sm"
-              textAlign="center"
-              className={styles.marginAuto}
-            >
-              Duyuru
-            </Text>
-          </Box>{" "}
-          <Box
-            style={{
-              marginTop: "20px",
-              border: "1px solid black",
-            }}
-          >
-            <Text
-              fontSize="xl"
-              textAlign="center"
-              bg="#2c5282"
-              color="white"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Başlık
-            </Text>
-            <Text
-              fontSize="xs"
-              textAlign="center"
-              bg="#edf2cc"
-              color="black"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Tarih
-            </Text>
-            <Text
-              p={1}
-              bg="white"
-              fontSize="sm"
-              textAlign="center"
-              className={styles.marginAuto}
-            >
-              Duyuru
-            </Text>
-          </Box>{" "}
-          <Box
-            style={{
-              marginTop: "20px",
-              border: "1px solid black",
-            }}
-          >
-            <Text
-              fontSize="xl"
-              textAlign="center"
-              bg="#2c5282"
-              color="white"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Başlık
-            </Text>
-            <Text
-              fontSize="xs"
-              textAlign="center"
-              bg="#edf2cc"
-              color="black"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Tarih
-            </Text>
-            <Text
-              p={1}
-              bg="white"
-              fontSize="sm"
-              textAlign="center"
-              className={styles.marginAuto}
-            >
-              Duyuru
-            </Text>
-          </Box>{" "}
-          <Box
-            style={{
-              marginTop: "20px",
-              border: "1px solid black",
-            }}
-          >
-            <Text
-              fontSize="xl"
-              textAlign="center"
-              bg="#2c5282"
-              color="white"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Başlık
-            </Text>
-            <Text
-              fontSize="xs"
-              textAlign="center"
-              bg="#edf2cc"
-              color="black"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Tarih
-            </Text>
-            <Text
-              p={1}
-              bg="white"
-              fontSize="sm"
-              textAlign="center"
-              className={styles.marginAuto}
-            >
-              Duyuru
-            </Text>
-          </Box>{" "}
-          <Box
-            style={{
-              marginTop: "20px",
-              border: "1px solid black",
-            }}
-          >
-            <Text
-              fontSize="xl"
-              textAlign="center"
-              bg="#2c5282"
-              color="white"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Başlık
-            </Text>
-            <Text
-              fontSize="xs"
-              textAlign="center"
-              bg="#edf2cc"
-              color="black"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Tarih
-            </Text>
-            <Text
-              p={1}
-              bg="white"
-              fontSize="sm"
-              textAlign="center"
-              className={styles.marginAuto}
-            >
-              Duyuru
-            </Text>
-          </Box>
-          <Box
-            style={{
-              marginTop: "20px",
-              border: "1px solid black",
-            }}
-          >
-            <Text
-              fontSize="xl"
-              textAlign="center"
-              bg="#2c5282"
-              color="white"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Başlık
-            </Text>
-            <Text
-              fontSize="xs"
-              textAlign="center"
-              bg="#edf2cc"
-              color="black"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Tarih
-            </Text>
-            <Text
-              p={1}
-              bg="white"
-              fontSize="sm"
-              textAlign="center"
-              className={styles.marginAuto}
-            >
-              Duyuru
-            </Text>
-          </Box>{" "}
-          <Box
-            style={{
-              marginTop: "20px",
-              border: "1px solid black",
-            }}
-          >
-            <Text
-              fontSize="xl"
-              textAlign="center"
-              bg="#2c5282"
-              color="white"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Başlık
-            </Text>
-            <Text
-              fontSize="xs"
-              textAlign="center"
-              bg="#edf2cc"
-              color="black"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Tarih
-            </Text>
-            <Text
-              p={1}
-              bg="white"
-              fontSize="sm"
-              textAlign="center"
-              className={styles.marginAuto}
-            >
-              Duyuru
-            </Text>
-          </Box>{" "}
-          <Box
-            style={{
-              marginTop: "20px",
-              border: "1px solid black",
-            }}
-          >
-            <Text
-              fontSize="xl"
-              textAlign="center"
-              bg="#2c5282"
-              color="white"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Başlık
-            </Text>
-            <Text
-              fontSize="xs"
-              textAlign="center"
-              bg="#edf2cc"
-              color="black"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Tarih
-            </Text>
-            <Text
-              p={1}
-              bg="white"
-              fontSize="sm"
-              textAlign="center"
-              className={styles.marginAuto}
-            >
-              Duyuru
-            </Text>
-          </Box>{" "}
-          <Box
-            style={{
-              marginTop: "20px",
-              border: "1px solid black",
-            }}
-          >
-            <Text
-              fontSize="xl"
-              textAlign="center"
-              bg="#2c5282"
-              color="white"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Başlık
-            </Text>
-            <Text
-              fontSize="xs"
-              textAlign="center"
-              bg="#edf2cc"
-              color="black"
-              className={styles.marginAuto}
-              style={{
-                margin: "0 auto",
-              }}
-            >
-              Tarih
-            </Text>
-            <Text
-              p={1}
-              bg="white"
-              fontSize="sm"
-              textAlign="center"
-              className={styles.marginAuto}
-            >
-              Duyuru
-            </Text>
-          </Box>
+          {announcements
+            .slice(0)
+            .reverse()
+            .map((item, index) => {
+              return (
+                <Box
+                  style={{
+                    marginTop: "20px",
+                    border: "1px solid black",
+                  }}
+                  key={index}
+                >
+                  <Text
+                    fontSize="xl"
+                    textAlign="center"
+                    bg="#2c5282"
+                    color="white"
+                    className={styles.marginAuto}
+                    style={{
+                      margin: "0 auto",
+                    }}
+                  >
+                    {item.title}
+                  </Text>
+                  <Text
+                    fontSize="xs"
+                    textAlign="center"
+                    bg="#edf2cc"
+                    color="black"
+                    className={styles.marginAuto}
+                    style={{
+                      margin: "0 auto",
+                    }}
+                  >
+                    {moment(item.createAt).format("DD-MM-YYYY, HH:mm")}
+                  </Text>
+                  <Text
+                    p={1}
+                    bg="white"
+                    fontSize="sm"
+                    textAlign="center"
+                    className={styles.marginAuto}
+                  >
+                    {item.description}
+                  </Text>
+                </Box>
+              );
+            })}
         </Box>
       </Box>
     </>

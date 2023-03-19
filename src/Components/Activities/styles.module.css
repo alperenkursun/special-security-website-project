@@ -1,5 +1,5 @@
 .mainpageContainer {
-  width: 1200px;
+  width: 1225px !important;
   height: max-content !important;
   margin: 50px auto;
   position: relative;

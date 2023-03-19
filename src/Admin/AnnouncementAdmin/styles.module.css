@@ -1,0 +1,19 @@
+.color {
+  color: black;
+}
+
+.crudButton {
+  padding: 10px;
+  margin: 0 3px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.crudButton:hover {
+  opacity: 1;
+}

@@ -18,6 +18,9 @@ import AnnouncementDetails from "./Components/AnnouncementDetails";
 import Activities from "./Components/Activities";
 import { useEffect, useState } from "react";
 import { Blocks } from "react-loader-spinner";
+import Admin from "./Admin";
+import PrivateRoute from "./PrivateRoute";
+import Page404 from "./Components/Page404";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -39,6 +42,7 @@ function App() {
           />
         </div>
       )}
+
       {!loading && (
         <div className="mainContainer">
           <Navbar />
@@ -63,9 +67,18 @@ function App() {
             <Route path="/silahsizegitim" element={<UnarmedEducation />} />
             <Route path="/yenilemeegitimi" element={<RenewalEducation />} />
             <Route path="/iletisim" element={<Contact />} />
-            <Route path="/admingirisi" element={<AdminLogin />} />
             <Route path="/duyurular" element={<AnnouncementDetails />} />
             <Route path="/faaliyetlerimiz" element={<Activities />} />
+            <Route path="/admingirisi" element={<AdminLogin />} />
+            <Route path="*" element={<Page404 />} />
+            <Route
+              path="/admin"
+              element={
+                <PrivateRoute>
+                  <Admin />
+                </PrivateRoute>
+              }
+            />
           </Routes>
           <Footer />
         </div>

@@ -1,6 +1,6 @@
 .mainpageContainer {
   width: 1200px;
-  /* height: calc(100vh - 168px) !important; */
+  height: calc(100vh - 168px) !important;
   height: 1600px;
   margin: 25px auto;
   position: relative;

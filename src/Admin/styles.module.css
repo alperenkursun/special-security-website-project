@@ -1,0 +1,25 @@
+.mainContainer {
+  width: 1200px;
+  margin: 0 auto;
+  height: max-content;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  color: white;
+  font-size: 50px;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.adminEditArea {
+  padding: 25px;
+}

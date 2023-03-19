@@ -24,24 +24,20 @@ function Navbar() {
   const [scrollStateY, setScrollStateY] = useState(false);
   const [menuItemInOut, setMenuItemInOut] = useState(false);
   const [aboutItemsDisplay, setAboutItemsDisplay] = useState(false);
-  //işaret
   const [identificationCardItemsDisplay, setIdentificationCardItemsDisplay] =
     useState(false);
   const [educationFlowItemsDisplay, setEducationFlowItemsDisplay] =
     useState(false);
   const [educationItemsDisplay, setEducationItemsDisplay] = useState(false);
 
-  const media1850 = useMediaQuery({ query: "(max-width: 1850px)" });
   const media1650 = useMediaQuery({ query: "(max-width: 1650px)" });
   const media1450 = useMediaQuery({ query: "(max-width: 1450px)" });
   const media1250 = useMediaQuery({ query: "(max-width: 1250px)" });
-  const media1100 = useMediaQuery({ query: "(max-width: 1100px)" });
   const media900 = useMediaQuery({ query: "(max-width: 900px)" });
   const media650 = useMediaQuery({ query: "(max-width: 650px)" });
   const media450 = useMediaQuery({ query: "(max-width: 450px)" });
 
   const changeDisplay = () => {
-    console.log(window.scrollY);
     if (window.scrollY >= 35) setScrollStateY(true);
     else {
       setScrollStateY(false);
@@ -70,7 +66,10 @@ function Navbar() {
         align="center"
         zIndex="100"
         className={`${styles.topNavbar} ${scrollStateY ? "none" : ""}`}
-        style={{ width: "100%", height: media1650 && "0px !important" }}
+        style={{
+          width: "100%",
+          height: media1650 && "0px !important",
+        }}
       >
         <Flex align="center" justify="center" height="100%">
           <h1>
@@ -232,23 +231,9 @@ function Navbar() {
                   bg="#EDF2F7"
                   variant="solid"
                   boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
+                  style={{ marginRight: "25px" }}
                 >
                   İletişim
-                </Button>
-              </Link>
-              <Link to="/admingirisi">
-                <Button
-                  color="white"
-                  bg="black"
-                  variant="outline"
-                  _hover={{
-                    bg: "white",
-                    color: " black",
-                    borderColor: "black",
-                  }}
-                  boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
-                >
-                  Admin Girişi
                 </Button>
               </Link>
             </ButtonGroup>
@@ -503,16 +488,6 @@ function Navbar() {
               }`}
             >
               İletişim
-            </Box>
-          </Link>
-          <Link to="/admingirisi">
-            <Box
-              px={8}
-              className={`${styles.menuItem} ${
-                menuItemInOut ? styles.menuItem7 : styles.menuItem70
-              }`}
-            >
-              Admin Girişi
             </Box>
           </Link>
         </Box>

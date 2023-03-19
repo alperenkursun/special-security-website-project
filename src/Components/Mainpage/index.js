@@ -4,10 +4,10 @@ import Showcase from "../Showcase";
 
 function MainPage() {
   return (
-    <>
+    <div>
       <Showcase />
       <MainText />
-    </>
+    </div>
   );
 }
 
